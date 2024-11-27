@@ -21,8 +21,8 @@ class CompositeConfigProviderPlugin
 
             foreach ($types as $cardType => $values) {
                 if (is_array($values)) {
-                    // $result['payment']['ccform']['availableTypes']['pagbank_paymentmagento_cc'][$cardType] = 
-                    //     array_values(array_unique($values));
+                    $result['payment']['ccform']['availableTypes']['pagbank_paymentmagento_cc'][$cardType] = 
+                        array_values(array_unique($values));
                 }
             }
         }
