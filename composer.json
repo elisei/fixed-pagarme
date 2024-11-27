@@ -1,0 +1,57 @@
+{
+    "name": "o2ti/fixed-pagarme",
+    "description": "O2TI - Corrige módulo da Pagarme que impede o uso com outros meios de pagamento",
+    "require": {
+        "php": "~7.4.0||~8.1.0||~8.2.0||~8.3.0",
+        "pagbank/payment-magento": "*",
+        "pagarme/pagarme-magento2-module": "*",
+        "ext-json": "*"
+    },
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "Bruno Elisei",
+            "email": "brunoelisei@o2ti.com"
+        }
+    ],
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "O2TI\\FixedPagarme\\": ""
+        }
+    },
+    "require-dev": {
+        "magento/magento-coding-standard": "*",
+        "phpmd/phpmd": "^2.13",
+        "phpstan/phpstan": "^1.6.8",
+        "phpstan/extension-installer": "^1.2",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        },
+        {
+            "type": "composer",
+            "url": "https://repo-magento-mirror.fooman.co.nz/"
+        }
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "magento/composer-dependency-version-audit-plugin": false,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
